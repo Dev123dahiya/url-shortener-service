@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "url-shortener-service"
+version = "0.1.0"
+description = "URL shortener built from Snowflake IDs, consistent-hash shards, an LRU cache and batched analytics"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+serve = ["uvicorn>=0.29"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["shortener"]
